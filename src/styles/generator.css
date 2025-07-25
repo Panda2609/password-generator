@@ -1,0 +1,176 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+}
+
+.generator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(41, 45, 135, 0.15);
+  padding: 2.5em 2em;
+  max-width: 400px;
+  width: 100%;
+  margin: 24px;
+}
+
+.generator-title h1 {
+  color: #222831;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.password-display {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5em;
+}
+.password-input {
+  flex: 1;
+  padding: 0.7em 1em;
+  font-size: 1.1em;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #222831;
+  outline: none;
+  transition: border 0.2s;
+}
+.password-input:focus {
+  border: 1.5px solid #7b8cff;
+}
+.copy-btn {
+  padding: 1.2em 1.2em;
+  background: #7b8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.copy-btn:disabled {
+  background: #bfc6e0;
+  cursor: not-allowed;
+}
+.copy-btn:not(:disabled):hover {
+  background: #5a6ee0;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+.controls label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #222831;
+  gap: 0.5em;
+}
+.controls input[type="range"] {
+  flex: 1;
+  margin-left: 1em;
+}
+.generate-btn {
+  width: 100%;
+  padding: 0.9em 0;
+  background: linear-gradient(90deg, #7b8cff 0%, #5a6ee0 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(41, 45, 135, 0.10);
+  transition: background 0.2s;
+}
+.generate-btn:hover {
+  background: linear-gradient(90deg, #5a6ee0 0%, #7b8cff 100%);
+}
+
+@media (max-width: 600px) {
+  .generator-container {
+    max-width: 98vw;
+    padding: 1em 0.6em;
+    border-radius: 16px;
+    margin: 0px 0px;
+  }
+  .generator-title h1 {
+    font-size: 1.3rem;
+  }
+  .password-display {
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+  .password-input {
+    font-size: 1em;
+    padding: 0.6em 0.7em;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .copy-btn {
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 1em;
+
+  }
+  .controls {
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+  .controls label {
+    padding: 0.4em 0em;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.95em;
+  }
+  .controls input[type="range"] {
+    margin-left: 0;
+    width: 100%;
+  }
+  .generate-btn {
+    font-size: 1em;
+    padding: 0.7em 0;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .generator-container {
+    padding: 1.5em 0.5em;
+    border-radius: 10px;
+    /* background-color: red; */
+  }
+  .generator-title h1 {
+    font-size: 1.3rem;
+  }
+
+}
